@@ -5,22 +5,22 @@
     <groupId>com.ejemplo</groupId>
     <artifactId>mi-proyecto</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <!-- Otras configuraciones... -->
-
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>mi-repositorio</id>
-            <url>https://mi.repositorio.com/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>mi-repositorio-snapshots</id>
-            <url>https://mi.repositorio.com/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <build>
+        <plugins>
+            <!-- ... Otros plugins ... -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
